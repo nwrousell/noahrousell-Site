@@ -1,49 +1,134 @@
 :root {
-    --main-bg: white;
-    --highlight: #4a148c;
-}
-/* Fonts - In Progress*/
-
-/* Nav */
-.nav {
-    margin-top: 0.5em;
-}
-.nav h2, .nav li, .nav ul {
-    display: inline;
-}
-.nav ul li {
-    margin-left: 2em;
-    font-size: 1.2em;
-    font-weight: 500;
-}
-.nav ul {
-    margin-top: 1.5em;
+    --highlight: #c62828;
+    --text-normal: #dadada;
+    --subtle-light: #4B4B4B;
+    --main-bg: #303030;
+    --subtle-dark: #212121;
 }
 
-.home-main {
-    margin-top: 5em;
-}
-/* Link Effects */
-.middle-underline::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--highlight);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
-}
-.middle-underline:hover::before{
-    visibility: visible;
-    transform: scaleX(1);
-}
-.middle-underline {
+#home.frame-full {
+    background-image: url("/noahrousell/imgs/home.png");
+    /* background-color: #303030; */
+    background-size: cover;
     position: relative;
 }
-.middle-underline:hover {
-    color: var(--highlight) !important;
-    transition: all 0.3s ease-in-out 0s;
+#projects.frame-full {
+    background-image: url("/noahrousell/imgs/projects.png");
+    /* background-color: #666666; */
+    background-size: cover;
+    position: relative;
+}
+#contact.frame-full {
+    background-image: url("/noahrousell/imgs/contact.png");
+    /* background-color: #303030; */
+    background-size: cover;
+    position: relative;
+}
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+}
+.bottom-right {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+.arrow-down-container i, .arrow-up-container i {
+    font-size: 8em;
+}
+body {
+    position: relative;
+}
+.nav {
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+.nav ul, .nav img, .nav li {
+    display: inline;
+}
+.nav li {
+    margin-right: 2em;
+}
+.nav .logo {
+    width: 3em;
+    background-size: cover;
+}
+#home .outside-container, #contact .outside-container, #projects .outside-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+#home h1, #home h2, #home h3 {
+    margin: 0;
+    padding: 0;
+}
+#contact .form-container {
+    width: 35%;
+    margin: auto;
+    padding: 2em;
+}
+#contact h1 {
+    margin: 0 0 0.5em 0;
+    font-weight: bold;
+}
+#contact input, #contact textarea {
+    border: 1px solid var(--text-normal);
+    /* padding: 0 0.5em; */
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    transition: none;
+}
+#contact input:focus, #contact textarea:focus {
+    border: 1px solid var(--highlight);
+    /* padding: 0 0.5em; */
+}
+#contact textarea {
+    resize: vertical;
+    height: 10em;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#contact label {
+    font-size: 1.2em;
+}
+#contact .submit {
+    margin-top: 1em;
+}
+#contact .submit:hover {
+    /* color: var(--highlight) !important; */
+    border: 1px solid var(--highlight);
+}
+.tag-outer p {
+    background: var(--subtle-light);
+    display: inline;
+    border-radius: 2em;
+    padding: 0.3em 1.5em;
+    color: var(--text-normal);
+}
+.pressed {
+    background: var(--text-normal) !important;
+    color: var(--main-bg) !important;
+}
+.project-container-inside {
+    background: var(--subtle-light);
+    padding: 1em;
+}
+.project-container-inside img {
+    max-width: 100%;
+}
+.project-container-outside {
+    padding: 0 2em !important;
 }

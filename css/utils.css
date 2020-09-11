@@ -1,0 +1,113 @@
+.text-left {
+    text-align: left !important;
+}
+/* Link Effects */
+.middle-underline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--highlight);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+.middle-underline:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+.middle-underline {
+    position: relative;
+}
+.middle-underline:hover {
+    color: var(--highlight) !important;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background-color: var(--highlight);
+}
+hr.thin {
+    height: 1px !important;
+}
+hr.divider-small {
+    width: 20%;
+    margin: auto;
+}
+.link-normal {
+    color: var(--highlight) !important;
+}
+.link-normal:hover {
+    color: var(--text-normal) !important
+}
+.btn-rounded-outline {
+    border: 2px solid var(--highlight);
+    border-radius: 2em;
+    padding: 0.5em 1.25em;
+    transition: all 0.3s ease-in-out;
+    color: var(--highlight) !important;
+    margin-left: -1em;
+}
+.btn-rounded-outline:hover {
+    background: var(--highlight);
+    color: white !important;
+}
+.frame-full {
+    height: 100vh;
+}
+.pointer-on-hover:hover {
+    cursor: pointer;
+}
+.highlight {
+    background: var(--highlight) !important;
+}
+.highlight-text {
+    color: var(--highlight) !important;
+}
+.regular-text {
+    color: var(--text-normal) !important;
+}
+.xl-text {
+    font-size: 10em;
+}
+.lg-text {
+    font-size: 7em;
+}
+.med-text {
+    font-size: 5em;
+}
+.sm-text {
+    font-size: 1.5em;
+}
+.bold {
+    font-weight: bold;
+}
+.shadow-on-hover:hover {
+    box-shadow: 0 5px var(--subtle-dark);
+}
+.shadow {
+    box-shadow: 0 5px var(--subtle-dark);
+}
+.text-half-bg {
+    position: relative;
+    z-index: 999;
+}
+.text-half-bg::before {
+    content: '';
+    position: absolute;
+    width: 105%;
+    height: 50%;
+    bottom: 0;
+    left: -2.5%;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    background: var(--highlight);
+    opacity: .3;
+}
+a.text-half-bg:hover::before {
+    height: 100%;
+}
