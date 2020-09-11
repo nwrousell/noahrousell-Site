@@ -8,21 +8,27 @@
 
 #home.frame-full {
     background-image: url("/noahrousell/imgs/home.png");
+    /* background-image: linear-gradient(to top right, var(--subtle-dark), var(--main-bg)) !important; */
     /* background-color: #303030; */
     background-size: cover;
     position: relative;
 }
 #projects.frame-full {
     background-image: url("/noahrousell/imgs/projects.png");
+    /* background-image: linear-gradient(to left, var(--subtle-dark), var(--main-bg)) !important; */
     /* background-color: #666666; */
     background-size: cover;
     position: relative;
 }
 #contact.frame-full {
     background-image: url("/noahrousell/imgs/contact.png");
+    /* background-image: linear-gradient(to bottom right, var(--subtle-dark), var(--main-bg)) !important; */
     /* background-color: #303030; */
     background-size: cover;
     position: relative;
+}
+.frame-separator {
+    margin: 0;
 }
 .middle {
     position: absolute;
@@ -55,15 +61,23 @@ body {
 .nav li {
     margin-right: 2em;
 }
-.nav .logo {
+.logo {
     width: 3em;
     background-size: cover;
 }
-#home .outside-container, #contact .outside-container, #projects .outside-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+#home, #project, #contact {
+    display: table;
     width: 100%;
+    /* text-align: center; */
+}
+#home .outside-container, #contact .outside-container, #projects .outside-container {
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+    width: 100vw !important;
+    vertical-align: middle;
+    display: table-cell;
+    margin: auto;
 }
 #home h1, #home h2, #home h3 {
     margin: 0;
@@ -131,4 +145,136 @@ body {
 }
 .project-container-outside {
     padding: 0 2em !important;
+}
+div.footer {
+    background: var(--subtle-light);
+}
+.footer hr.thin {
+    margin: 0;
+    height: 3px !important;
+}
+.footer .logo {
+    margin: 5em 0;
+}
+.social {
+    width: 3em;
+    height: 3em;
+    border: 2px solid var(--text-normal);
+    border-radius: 50%;
+    margin: auto;
+}
+html, body {
+    height: 100%;
+}
+.footer .socials {
+    margin-bottom: 3em;
+}
+.social, .social-container-outside {
+    display: inline-block;
+}
+.social-container-outside {
+    margin: 0 1.5em;
+}
+.social {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.social:hover {
+    background: var(--text-normal);
+}
+.social-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: var(--text-normal);
+    transition: all 0.3s ease-in-out;
+}
+.social:hover .social-icon {
+    fill: var(--subtle-dark);
+}
+.footer p {
+    padding-bottom: 3em;
+}
+.nav li a{
+    font-size: 1.2em;
+}
+.tag-outer, .tag-outer p {
+    display: inline-block;
+}
+.tag-outer {
+    margin: 0 1.5em;
+}
+.tag-outer p {
+    font-size: 1.2em;
+}
+.form-container {
+    margin: 6em auto !important;
+}
+.sidenav-trigger {
+    color: var(--text-normal);
+}
+#slide-out {
+    background-color: var(--subtle-light) !important;
+}
+#slide-out li a {
+    color: var(--text-normal);
+}
+#projects h1 {
+    margin: 2em 0;
+}
+/* Mobile Styles */
+@media only screen and (max-width: 900px){
+    #home h3 {
+        font-size: 3.5em;
+        margin-top: 0.3em;
+    }
+    #contact h1 {
+        font-size: 3em;
+    }
+    #contact .form-container {
+        width: 75%;
+    }
+    #projects .project-container-inside {
+        margin-bottom: 1em;
+    }
+    .arrow-down-container, .arrow-up-container {
+        display: none;
+    }
+    #home.frame-full, #projects.frame-full, #contact.frame-full {
+        background-image: linear-gradient(to right, var(--subtle-dark), var(--main-bg)) !important;
+    }
+    .frame-full {
+        min-height: 100vh;
+        height: auto !important;
+    }
+    .logo {
+        margin: 3em 0 !important;
+    }
+    .nav .logo {
+        margin: 0.5em 0 0 0 !important;
+    }
+    #projects h1{
+        margin: 0.5em 0 !important;
+    }
+    .frame-separator {
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 500px){
+    #home h2 {
+        font-size: 4em;
+    }
+    .tag-outer {
+        margin: 0 0.1em;
+    }
+    .social-container-outside {
+        margin: 0 0.2em;
+    }
+    #contact .form-container {
+        width: 100%;
+    }
+    #home h3 {
+        font-size: 2.5em;
+    }
 }

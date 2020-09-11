@@ -17,9 +17,15 @@
     <body>
             <div class="nav container">
                 <a href="#"><img class="logo" src="imgs/red-logo.png" alt="Noah Rousell Logo"></a>
-                <ul class="right">
-                    <li><a href="#" class="grey-text text-lighten-4 middle-underline">About</a></li>
-                    <li><a href="#" class="grey-text text-lighten-4 middle-underline">Projects</a></li>
-                    <li><a href="#" class="red-text text-darken-4 btn-rounded-outline">Contact</a></li>
+                <a href="#" data-target="slide-out" class="sidenav-trigger right hide-on-large-only"><i class="medium material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#" class="grey-text text-lighten-4 text-half-bg">About</a></li>
+                    <li><a href="#" class="grey-text text-lighten-4 text-half-bg">Projects</a></li>
+                    <li><a href="#" class="red-text text-darken-4 btn-rounded-outline half-bg-subtle">Contact</a></li>
                 </ul>
             </div>
+            <ul id="slide-out" class="sidenav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
