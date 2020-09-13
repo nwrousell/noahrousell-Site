@@ -39,8 +39,8 @@
 </div>
 
 <!-- Javascript Here -->
-<script type="text/javascript" src="js/navigation.js"></script>
 <script type="text/javascript" src="js/projects.js"></script>
+<script type="text/javascript" src="js/navigation.js"></script>
 <script type="text/javascript">
     // Materialize Mobile Nav Initialization
     document.addEventListener('DOMContentLoaded', function() {

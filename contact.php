@@ -38,7 +38,7 @@
     } // end of form validation
  ?>
 <!-- HTML -->
-<div id="contact"class="frame-full">
+<div id="contact"class="frame-full hide">
     <div class="outside-container">
         <div class="container">
             <div class="form-container grey darken-3">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div class = "arrow-up-container bottom-right">
-        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_up</i>
+    <div class = "arrow-left-container bottom-left">
+        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_left</i>
     </div>
 </div>

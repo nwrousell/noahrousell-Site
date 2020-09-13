@@ -6,7 +6,7 @@
             <h3 class="regular-text med-text">I design/develop useful, beautiful things.</h3>
         </div>
     </div>
-    <div class = "arrow-down-container bottom-right">
-        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_down</i>
+    <div class = "arrow-right-container bottom-right">
+        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_right</i>
     </div>
 </div>

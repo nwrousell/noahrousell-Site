@@ -1,4 +1,4 @@
-<div id="projects" class="frame-full center">
+<div id="projects" class="frame-full center hide">
     <div class="outside-container">
         <div class="container">
             <h1 class="regular-text center bold"><span class="squiggly-underline underline-move-on-hover">Projects</span></h1>
@@ -27,7 +27,10 @@
             </div>
         </div>
     </div>
-    <div class = "arrow-down-container bottom-right">
-        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_down</i>
+    <div class = "arrow-right-container bottom-right">
+        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_right</i>
+    </div>
+    <div class = "arrow-left-container bottom-left">
+        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_left</i>
     </div>
 </div>

@@ -2,7 +2,7 @@ var tags;
 var webDevProjects = ['<div class="col project-container-outside s12 m6 l4"><div class="project-container-inside center"><img src="imgs/projects/cycles-endurance.png" alt=""><p class="regular-text sm-text text-left">A website I built with WordPress for a local Bike Shop.</p><a href="#" class="text-half-bg regular-text sm-text">Visit Site</a></div></div>'];
 var gameDevProjects = ['<div class="col project-container-outside s12 m6 l4"><div class="project-container-inside center"><img src="imgs/projects/puzzling-adventure.png" alt=""><p class="regular-text sm-text text-left">A puzzle game I made with Unity with some intriguing puzzles.</p><a href="#" class="text-half-bg regular-text sm-text">Play it</a></div></div>'];
 var appProjects = [""];
-window.onload = function(){
+setTimeout(function(){
     tags = [
         {
             tag: "all",
@@ -33,7 +33,7 @@ window.onload = function(){
         tags[i].element.addEventListener("click", togglePressed);
     }
     loadProjects();
-}
+}, 200);
 function togglePressed(){
     var tagID = this.id;
     for(var i=0;i<tags.length;i++){

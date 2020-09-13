@@ -94,7 +94,7 @@ hr.divider-small {
 }
 .text-half-bg {
     position: relative;
-    z-index: 999;
+    z-index: 50;
 }
 .text-half-bg::before {
     content: '';
@@ -121,7 +121,7 @@ a.text-half-bg:hover::before {
     text-decoration: none;
 }
 .underline-move-on-hover:hover {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23c62828' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E") !important;  
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23c62828' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E") !important;
     background-position: bottom;
     background-repeat: repeat-x;
     background-size: auto 6px;
@@ -129,4 +129,21 @@ a.text-half-bg:hover::before {
     padding-bottom: .1em;
     text-decoration: none;
     display: inline;
+}
+body {
+    position: relative;
+}
+.transition-effect {
+    z-index: 999;
+    position: fixed;
+    width: 200vw;
+    height: 100vh;
+    background: var(--subtle-light);
+    top: 0;
+    left: -100%;
+    transform: scaleX(0);
+    transition: all 1s ease-in-out;
+}
+.transition-effect.active {
+    transform: scaleX(1);
 }
