@@ -99,6 +99,7 @@ body {
 }
 #contact input, #contact textarea {
     border: 1px solid var(--text-normal);
+    color: var(--text-normal);
     /* padding: 0 0.5em; */
     outline: none;
     -webkit-box-shadow: none;

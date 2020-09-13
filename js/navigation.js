@@ -1,5 +1,14 @@
 var transitionElem = document.querySelector(".transition-effect");
-var currentPage = "#home";
+
+var urlVars = window.location.href.split("?");
+if(urlVars.length != 1){ // If there is a variable
+    var pageToLoad = urlVars[1].split("=")[1].split("&")[0];
+    var currentPage = pageToLoad;
+    switchPage("#home", "#"+pageToLoad);
+}else {
+    var currentPage = "#home";
+}
+
 
 window.onload = function(){
     transitionElem.classList.remove("active");
