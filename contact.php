@@ -3,7 +3,7 @@
     <div class="outside-container">
         <div class="container">
             <div class="form-container grey darken-3">
-                <h1 class="regular-text center">Contact</h1>
+                <h1 class="regular-text center"><?php echo $formHeading; ?></h1>
                 <form id="contact-form"class="<?php echo $formHideClass; ?>" action="index.php?page=contact" method="POST">
                     <label class="regular-text text-left">Email</label>
                     <input class="grey darken-4" type="text" name="email" value="<?php echo $email ?>">

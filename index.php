@@ -5,11 +5,13 @@
     $message = '';
     $formHideClass = '';
     $successMsg = '';
+    $formHeading = 'Contact';
 
     // Check if mailsend is in url
     if(isset($_GET['mailsend'])){
         $formHideClass = 'hide';
-        $successMsg = "Success! Thanks for reaching out, I'll get back to you soon :)";
+        $formHeading = 'Success!';
+        $successMsg = "Thanks for reaching out, I'll get back to you soon :)";
     }
 
     if(isset($_POST['submit'])){

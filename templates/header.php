@@ -17,7 +17,7 @@
     </head>
     <body>
             <div class="nav container">
-                <a href="#"><img class="logo" src="imgs/red-logo.png" alt="Noah Rousell Logo"></a>
+                <a href="#"><img class="logo about-link" src="imgs/red-logo.png" alt="Noah Rousell Logo"></a>
                 <a href="#" data-target="slide-out" class="sidenav-trigger right hide-on-large-only"><i class="medium material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#" class="grey-text text-lighten-4 text-half-bg about-link">About</a></li>

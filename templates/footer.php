@@ -3,7 +3,7 @@
 <div class="footer center">
     <hr class="thin">
     <div class="footer-inside container">
-        <a href="/index.php"><img class="logo" src="imgs/white-logo" alt="Noah Rousell Logo"></a>
+        <a href=""><img class="logo about-link" src="imgs/white-logo" alt="Noah Rousell Logo"></a>
         <div class="socials container row">
             <div class="social-container-outside center">
                 <a href="https://www.linkedin.com/in/noah-rousell/" target="_blank">

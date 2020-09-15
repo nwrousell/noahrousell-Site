@@ -7,21 +7,21 @@
 }
 
 #home.frame-full {
-    background-image: url("/noahrousell/imgs/home.png");
+    background-image: url("/demo/test/imgs/home.png");
     /* background-image: linear-gradient(to top right, var(--subtle-dark), var(--main-bg)) !important; */
     /* background-color: #303030; */
     background-size: cover;
     position: relative;
 }
 #projects.frame-full {
-    background-image: url("/noahrousell/imgs/projects.png");
+    background-image: url("/demo/test/imgs/projects.png");
     /* background-image: linear-gradient(to left, var(--subtle-dark), var(--main-bg)) !important; */
     /* background-color: #666666; */
     background-size: cover;
     position: relative;
 }
 #contact.frame-full {
-    background-image: url("/noahrousell/imgs/contact.png");
+    background-image: url("/demo/test/imgs/contact.png");
     /* background-image: linear-gradient(to bottom right, var(--subtle-dark), var(--main-bg)) !important; */
     /* background-color: #303030; */
     background-size: cover;

@@ -36,12 +36,15 @@ window.onload = function(){
             switchPage("#contact", "#projects");
         }, 1000);
     });
-    document.querySelector(".about-link").addEventListener("click", function(){
-        transitionElem.classList.add("active");
-        setTimeout(function(){
-            switchPage(currentPage, "#home");
-        }, 1000);
-    });
+    var aboutLinks = document.querySelectorAll(".about-link");
+    for(var i=0;i<aboutLinks.length;i++){
+        aboutLinks[i].addEventListener("click", function(){
+            transitionElem.classList.add("active");
+            setTimeout(function(){
+                switchPage(currentPage, "#home");
+            }, 1000);
+        });
+    }
     document.querySelector(".projects-link").addEventListener("click", function(){
         transitionElem.classList.add("active");
         setTimeout(function(){
