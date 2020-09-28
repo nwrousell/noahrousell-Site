@@ -1,4 +1,4 @@
-<div id="projects" class="frame-full center hide">
+<div id="projects" class="frame-full hide">
     <div class="outside-container">
         <div class="container">
             <h1 class="regular-text center bold"><span class="squiggly-underline underline-move-on-hover">Projects</span></h1>
@@ -19,9 +19,9 @@
             <div class="projects-container row">
                 <!-- <div class="col project-container-outside s12 m6 l4">
                     <div class="project-container-inside center">
-                        <img src="imgs/projects/puzzling-adventure.png" alt="">
-                        <p class="regular-text sm-text text-left">A puzzle game I made with Unity with some intriguing puzzles.</p>
-                        <a href="#" target = "_blank" class="text-half-bg regular-text sm-text">Play it</a>
+                        <img src="imgs/projects/pocket-counter.png" alt="">
+                        <p class="regular-text sm-text text-left">A Progressive Web App that uses Firebase and lets users keep track of games scores in the cloud.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.noahrousell.pocketcounter&hl=en_US" target = "_blank" class="text-half-bg regular-text sm-text">Google Play Store</a>
                     </div>
                 </div> -->
             </div>

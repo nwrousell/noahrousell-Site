@@ -51,6 +51,22 @@
                     <p class="tools-list">WordPress</p>
                   </div>
                 </div>
+            <div class="testimonials-container">
+                <h2>Testimonials</h2>
+                <hr class="about-divider">
+                <p>What people I've worked with have said about me...</p>
+                <div class="testimonial">
+                    <p class="quote">"Working with Noah was game-changing for me… Noah took care of several issues, large and small, so I could focus on what matters. I came to feel great confidence that whatever task he had taken on for me he would complete fully and on time–if not early!"</p>
+                    <p class="who">Sarah Jane Shangraw</p>
+                    <p class="title">Meditation and Yoga Teacher, <a href="https://www.sarahjaneshangraw.com/" target="_blank">sarahjaneshangraw.com</a></p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Noah, listen(ed) to our needs and did a great job on our website. We look forward on building our relationship with Noah as our web needs will constantly change based on our clients demands!
+"</p>
+                    <p class="who">J.P. Lavigne</p>
+                    <p class="title">Owner, <a href="https://www.cyclesendurance.com/" target="_blank">cyclesendurance.com</a></p>
+                </div>
+            </div>
         </div>
     </div>
     <div class = "arrow-left-container bottom-left">

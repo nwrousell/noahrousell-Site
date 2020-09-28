@@ -152,12 +152,13 @@ body {
 .project-container-inside {
     background: var(--subtle-light);
     padding: 1em;
+    margin-bottom: 1em;
 }
 .project-container-inside img {
     max-width: 100%;
 }
 .project-container-outside {
-    padding: 0 2em !important;
+    margin: 0;
 }
 div.footer {
     background: var(--subtle-light);
@@ -236,6 +237,45 @@ html, body {
 #projects h1 {
     margin: 2em 0;
 }
+.frame-full {
+    min-height: 100vh !important;
+    height: auto !important;
+}
+
+.testimonials-container {
+    text-align: center;
+    color: var(--text-normal) !important;
+    margin-bottom: 10em;
+    font-size: 1.2em;
+    border-radius: 1.5em;
+    background: var(--subtle-dark);
+    border: 2px solid #424242;
+    padding: 3em;
+}
+.testimonial {
+    padding: 1.5em;
+}
+.testimonial:nth-of-type(1){
+    border-bottom: 2px solid #424242;
+}
+.quote {
+    font-size: 1.2em;
+}
+.who {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.testimonial a {
+    color: var(--highlight) !important;
+    transition: all 0.3s ease-in-out;
+}
+.testimonial a:hover {
+    color: var(--text-normal) !important;
+}
+.testimonials-container .about-divider {
+    height: 0.25em !important;
+    width: 5em !important;
+}
 /* Mobile Styles */
 @media only screen and (max-width: 1000px){
     #home h3 {
@@ -248,9 +288,7 @@ html, body {
     #contact .form-container {
         width: 75%;
     }
-    #projects .project-container-inside {
-        margin-bottom: 1em;
-    }
+
     .arrow-right-container, .arrow-left-container {
         /* display: none; */
     }
@@ -339,14 +377,14 @@ html, body {
   margin: 10em 0 16em 0;
   font-size: 1.1em;
 }
-.col:nth-of-type(1) {
+.tools-container .col:nth-of-type(1) {
   border-right: 1px solid #424242;
 }
-.col {
+.tools-container .col {
     padding: 4em 3em;
   text-align: center;
 }
-.col h2 {
+.tools-container .col h2 {
     font-size: 2.5em;
 }
 .text-highlight {
@@ -369,7 +407,7 @@ html, body {
     .tools-container {
         grid-template-columns: 1fr;
     }
-    .col:nth-of-type(1) {
+    .tools-container .col:nth-of-type(1) {
       border: none;
       border-bottom: 1px solid #424242;
     }
@@ -389,5 +427,14 @@ html, body {
     }
     #home h3 {
         font-size: 2.5em;
+    }
+    #about .container {
+        width: 90% !important;
+    }
+    .testimonials-container h2 {
+        font-size: 2.5em;
+    }
+    .testimonials-container {
+        padding: 1.5em !important;
     }
 }
