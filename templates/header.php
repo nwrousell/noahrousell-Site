@@ -26,7 +26,8 @@
                 </ul>
             </div>
             <ul id="slide-out" class="sidenav">
-                <li><a href="#" class="about-link-mobile">About</a></li>
-                <li><a href="#" class="projects-link-mobile">Projects</a></li>
-                <li><a href="#contact" class="contact-link-mobile">Contact</a></li>
+                <li><a href="#" class="to-home home-link">Home</a></li>
+                <li><a href="#" class="to-about about-link">About</a></li>
+                <li><a href="#" class="to-projects projects-link">Projects</a></li>
+                <li><a href="#" class="to-contact contact-link">Contact</a></li>
             </ul>
