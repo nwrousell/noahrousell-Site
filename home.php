@@ -7,6 +7,6 @@
         </div>
     </div>
     <div class = "arrow-right-container bottom-right">
-        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_right</i>
+        <i class="to-about material-icons highlight-text large pointer-on-hover">keyboard_arrow_right</i>
     </div>
 </div>

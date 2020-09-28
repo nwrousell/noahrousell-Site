@@ -21,16 +21,16 @@
                     <div class="project-container-inside center">
                         <img src="imgs/projects/puzzling-adventure.png" alt="">
                         <p class="regular-text sm-text text-left">A puzzle game I made with Unity with some intriguing puzzles.</p>
-                        <a href="#" class="text-half-bg regular-text sm-text">Play it</a>
+                        <a href="#" target = "_blank" class="text-half-bg regular-text sm-text">Play it</a>
                     </div>
                 </div> -->
             </div>
         </div>
     </div>
     <div class = "arrow-right-container bottom-right">
-        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_right</i>
+        <i class="to-contact material-icons highlight-text large pointer-on-hover">keyboard_arrow_right</i>
     </div>
     <div class = "arrow-left-container bottom-left">
-        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_left</i>
+        <i class="to-about material-icons highlight-text large pointer-on-hover">keyboard_arrow_left</i>
     </div>
 </div>

@@ -50,9 +50,11 @@
 <?php include 'templates/header.php'; ?>
 
 <?php include 'home.php'; ?>
-<!-- <hr class="frame-separator"> -->
+
+<?php include 'about.php'; ?>
+
 <?php include 'projects.php'; ?>
-<!-- <hr class="frame-separator"> -->
+
 <?php include 'contact.php'; ?>
 
 <div class="transition-effect active">

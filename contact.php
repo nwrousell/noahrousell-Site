@@ -24,6 +24,6 @@
         </div>
     </div>
     <div class = "arrow-left-container bottom-left">
-        <i class="material-icons highlight-text large pointer-on-hover">keyboard_arrow_left</i>
+        <i class="to-projects material-icons highlight-text large pointer-on-hover">keyboard_arrow_left</i>
     </div>
 </div>
