@@ -1,32 +1,78 @@
 var tags;
-var webDevProjects = ['<div class="col project-container-outside s12 m6 l4"><div class="project-container-inside center"><img src="imgs/projects/cycles-endurance.png" alt=""><p class="regular-text sm-text text-left">A website I built with WordPress for a local Bike Shop.</p><a href="https://www.cyclesendurance.com/" target="_blank" class="text-half-bg regular-text sm-text">Visit Site</a></div></div>'];
 var gameDevProjects = ['<div class="col project-container-outside s12 m6 l4"><div class="project-container-inside center"><img src="imgs/projects/puzzling-adventure.png" alt=""><p class="regular-text sm-text text-left">A puzzle game I made with Unity with some intriguing puzzles.</p><a href="#" target="_blank" class="text-half-bg regular-text sm-text">Play it</a></div></div>','<div class="col project-container-outside s12 m6 l4"><div class="project-container-inside center"><img src="imgs/projects/rewinding-evolution.png" alt=""><p class="regular-text sm-text text-left">My first public game / first game jam - 2D top-down adventure shooter.</p><a href="https://noahrousell.itch.io/rewinding-evolution" target = "_blank" class="text-half-bg regular-text sm-text">Play it</a></div></div>'];
-var appProjects = ['<div class="col project-container-outside s12 m6 l4"><div class="project-container-inside center"><img src="imgs/projects/pocket-counter.png" alt=""><p class="regular-text sm-text text-left">A Progressive Web App that uses Firebase and lets users keep track of games scores in the cloud.</p><a href="https://play.google.com/store/apps/details?id=com.noahrousell.pocketcounter&hl=en_US" target = "_blank" class="text-half-bg regular-text sm-text">Google Play Store</a></div></div>'];
+
+var projects = [
+    {
+        name: "Cycles Endurance Site",
+        tags: ['web'],
+        imgSrc: "imgs/projects/cycles-endurance.png",
+        body: "A website I built with WordPress for a local Bike Shop.",
+        btns: [
+            {
+                text: 'Visit Site',
+                link: 'https://www.cyclesendurance.com/'
+            }
+        ]
+    },
+    {
+        name: "Pocket Counter",
+        tags: ['app'],
+        imgSrc: "imgs/projects/pocket-counter.png",
+        body: "A Progressive Web App I made and deployed to the Google Play Store that lets users keep games' scores in the cloud.",
+        btns: [
+            {
+                text: 'Visit Store Listing',
+                link: 'https://play.google.com/store/apps/details?id=com.noahrousell.pocketcounter'
+            }
+        ]
+    },
+    {
+        name: "A Puzzling Adventure",
+        tags: ['game'],
+        imgSrc: "imgs/projects/puzzling-adventure.png",
+        body: "A puzzle game I made with Unity that has some intriguing puzzles.",
+        btns: [
+            {
+                text: 'Play',
+                link: 'https://noahrousell.itch.io/a-puzzling-adventure'
+            }
+        ]
+    },
+    {
+        name: "Rewinding Evolution",
+        tags: ['game'],
+        imgSrc: "imgs/projects/rewinding-evolution.png",
+        body: "My first public game / game jam - 2D top-down adventure shooter.",
+        btns: [
+            {
+                text: 'Play',
+                link: 'https://noahrousell.itch.io/rewinding-evolution'
+            }
+        ]
+    }
+];
+
 setTimeout(function(){
     tags = [
         {
             tag: "all",
             pressed: true,
-            element: document.querySelector("#all"),
-            projects: [webDevProjects,gameDevProjects,appProjects]
+            element: document.querySelector("#all")
         },
         {
-            tag: "webDev",
+            tag: "web",
             pressed: false,
-            element: document.querySelector("#webDev"),
-            projects: webDevProjects
+            element: document.querySelector("#web")
         },
         {
-            tag: "apps",
+            tag: "app",
             pressed: false,
-            element: document.querySelector("#apps"),
-            projects: appProjects
+            element: document.querySelector("#app")
         },
         {
-            tag: "gameDev",
+            tag: "game",
             pressed: false,
-            element: document.querySelector("#gameDev"),
-            projects: gameDevProjects
+            element: document.querySelector("#game")
         },
     ];
     for(var i=0;i<tags.length;i++){
@@ -84,23 +130,48 @@ function otherTagPressed(indexToExclude){
     return otherPressed;
 }
 function loadProjects(){
-    var code = "";
+    // Clear projects first
+    document.querySelector(".projects-container").innerHTML = "";
+
     if(tags[0].pressed && !otherTagPressed(0)){
-        for(var i=0;i<tags[0].projects.length;i++){
-            for(var x=0;x<tags[0].projects[i].length;x++){
-                code += tags[0].projects[i][x];
-            }
+        // All tag down
+        for (var i = 0; i < projects.length; i++) {
+            document.querySelector(".projects-container").appendChild(createProjectCard(projects[i]));
         }
     } else{
-        for(var i=1;i<tags.length;i++){
+        // User wants specific tag(s)
+        // Loop through tags minus "all" and render those
+        for (var i = 01; i < tags.length; i++) {
             if(tags[i].pressed){
-                for(var x=0;x<tags[i].projects.length;x++){
-                    code+=tags[i].projects[x];
+                for(var x=0;x<projects.length;x++){
+                    if(projects[x].tags.includes(tags[i].tag)){
+                        // Include this project
+                        document.querySelector(".projects-container").appendChild(createProjectCard(projects[x]));
+                    }
                 }
             }
         }
     }
 
-    document.querySelector(".projects-container.row").innerHTML = code;
+}
+function createProjectCard(projectInfo){
+    var project = document.createElement("DIV");
+    project.classList.add("col");
+    project.classList.add("project-container");
+    project.classList.add("s12");
+    project.classList.add("m6");
+    project.classList.add("l4");
 
+    var btnsCode = "";
+    for (var i = 0; i < projectInfo.btns.length; i++) {
+        btnsCode += `<a href="${projectInfo.btns[i].link}" target = "_blank" class="text-half-bg regular-text sm-text">${projectInfo.btns[i].text}</a>`;
+    }
+
+    project.innerHTML = `<div class="project-container-inside center">
+    <img src="${projectInfo.imgSrc}" alt="Noah Rousell ${projectInfo.name} Logo">
+        <p class="regular-text sm-text text-left">${projectInfo.body}</p>
+        ${btnsCode}
+    </div>`;
+
+    return project;
 }

@@ -7,13 +7,13 @@
                     <p id="all"class="center pointer-on-hover pressed shadow">All</p>
                 </div>
                 <div class="tag-outer">
-                    <p id="webDev" class="center pointer-on-hover not-pressed shadow">Web Dev</p>
+                    <p id="web" class="center pointer-on-hover not-pressed shadow">Web Dev</p>
                 </div>
                 <div class="tag-outer">
-                    <p id="apps"class="center pointer-on-hover not-pressed shadow">Apps</p>
+                    <p id="app"class="center pointer-on-hover not-pressed shadow">Apps</p>
                 </div>
                 <div class="tag-outer">
-                    <p id="gameDev"class="center pointer-on-hover not-pressed shadow">Game Dev</p>
+                    <p id="game"class="center pointer-on-hover not-pressed shadow">Game Dev</p>
                 </div>
             </div>
             <div class="projects-container row">
