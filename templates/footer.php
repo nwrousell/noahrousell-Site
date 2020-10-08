@@ -3,7 +3,7 @@
 <div class="footer center">
     <hr class="thin">
     <div class="footer-inside container">
-        <a href=""><img class="to-home logo home-link" src="imgs/white-logo" alt="Noah Rousell Logo"></a>
+        <a href=""><img class="to-home logo home-link" src="imgs/white-logo.png" alt="Noah Rousell Logo"></a>
         <div class="socials container row">
             <div class="social-container-outside center">
                 <a href="https://www.linkedin.com/in/noah-rousell/" target="_blank">
