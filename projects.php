@@ -16,7 +16,7 @@
                     <p id="game"class="center pointer-on-hover not-pressed shadow">Game Dev</p>
                 </div>
             </div>
-            <div class="projects-container row">
+            <div class="projects-container">
                 <!-- <div class="col project-container-outside s12 m6 l4">
                     <div class="project-container-inside center">
                         <img src="imgs/projects/pocket-counter.png" alt="">

@@ -42,11 +42,23 @@ var projects = [
         name: "Rewinding Evolution",
         tags: ['game'],
         imgSrc: "imgs/projects/rewinding-evolution.png",
-        body: "My first public game / game jam - 2D top-down adventure shooter.",
+        body: "My first public game / game jam. It's a 2D top-down adventure shooter.",
         btns: [
             {
                 text: 'Play',
                 link: 'https://noahrousell.itch.io/rewinding-evolution'
+            }
+        ]
+    },
+    {
+        name: "Google Meet Self-Hider",
+        tags: ['web'],
+        imgSrc: "imgs/projects/google-meet-extension.png",
+        body: "A simple Chrome Extension that lets users hide themselves (for themselves), so they don't get self-conscious in meetings.",
+        btns: [
+            {
+                text: 'Extension',
+                link: 'https://chrome.google.com/webstore/detail/google-meet-self-hider/doademagllblanlbmlfojpigmgiddndh?hl=en'
             }
         ]
     }

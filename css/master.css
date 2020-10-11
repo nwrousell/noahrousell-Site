@@ -152,13 +152,20 @@ body {
 .project-container-inside {
     background: var(--subtle-light);
     padding: 1em;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 .project-container-inside img {
     max-width: 100%;
 }
 .project-container-outside {
     margin: 0;
+    padding: 0;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    margin-bottom: 5em;
 }
 div.footer {
     background: var(--subtle-light);
@@ -235,13 +242,15 @@ html, body {
     color: var(--text-normal);
 }
 #projects h1 {
-    margin: 2em 0;
+    margin: 2em 0 1em 0;
 }
 .frame-full {
     min-height: 100vh !important;
     height: auto !important;
 }
-
+.tags {
+    margin-bottom: 3em;
+}
 .testimonials-container {
     text-align: center;
     color: var(--text-normal) !important;
@@ -398,7 +407,6 @@ html, body {
   margin-bottom: 2.5em;
   font-size: 1.15em;
 }
-/* TODO - media only screen and(mobile size) */
 .tools-list {
   margin: 0.2em 0;
   font-size: 1.15em;
