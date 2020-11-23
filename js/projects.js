@@ -12,7 +12,8 @@ var projects = [
                 text: 'Visit Site',
                 link: 'https://www.cyclesendurance.com/'
             }
-        ]
+        ],
+        included: false
     },
     {
         name: "Pocket Counter",
@@ -24,7 +25,8 @@ var projects = [
                 text: 'Visit Store Listing',
                 link: 'https://play.google.com/store/apps/details?id=com.noahrousell.pocketcounter'
             }
-        ]
+        ],
+        included: false
     },
     {
         name: "A Puzzling Adventure",
@@ -36,7 +38,8 @@ var projects = [
                 text: 'Play',
                 link: 'https://noahrousell.itch.io/a-puzzling-adventure'
             }
-        ]
+        ],
+        included: false
     },
     {
         name: "Rewinding Evolution",
@@ -48,7 +51,8 @@ var projects = [
                 text: 'Play',
                 link: 'https://noahrousell.itch.io/rewinding-evolution'
             }
-        ]
+        ],
+        included: false
     },
     {
         name: "Google Meet Self-Hider",
@@ -60,7 +64,21 @@ var projects = [
                 text: 'Extension',
                 link: 'https://chrome.google.com/webstore/detail/google-meet-self-hider/doademagllblanlbmlfojpigmgiddndh?hl=en'
             }
-        ]
+        ],
+        included: false
+    },
+    {
+        name: "Recount",
+        tags: ['web', 'app'],
+        imgSrc: "imgs/projects/recount.png",
+        body: "A website I built for an app idea I've been working on to see if people would be interested.",
+        btns: [
+            {
+                text: 'Visit Site',
+                link: 'https://recount.mukduk.io/'
+            }
+        ],
+        included: false
     }
 ];
 
@@ -144,6 +162,10 @@ function otherTagPressed(indexToExclude){
 function loadProjects(){
     // Clear projects first
     document.querySelector(".projects-container").innerHTML = "";
+    // Clear included values
+    for(var i=0;i<projects.length;i++){
+        projects[i].included = false;
+    }
 
     if(tags[0].pressed && !otherTagPressed(0)){
         // All tag down
@@ -153,12 +175,16 @@ function loadProjects(){
     } else{
         // User wants specific tag(s)
         // Loop through tags minus "all" and render those
-        for (var i = 01; i < tags.length; i++) {
+        for (var i = 1; i < tags.length; i++) {
             if(tags[i].pressed){
                 for(var x=0;x<projects.length;x++){
                     if(projects[x].tags.includes(tags[i].tag)){
-                        // Include this project
-                        document.querySelector(".projects-container").appendChild(createProjectCard(projects[x]));
+                        // Include the project if it's not already included
+                        if(!projects[x].included){
+                            // Include this project
+                            document.querySelector(".projects-container").appendChild(createProjectCard(projects[x]));
+                            projects[x].included = true;
+                        }
                     }
                 }
             }
