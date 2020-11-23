@@ -15,6 +15,7 @@
                     <div class="red-text">
                         <?php echo $errors['message']; ?>
                     </div>
+                    <input type="text" name="website" class="hide" value="">
                     <div class="center-align">
                         <input type="submit" name="submit" value="submit" class="submit btn z-depth-0 regular-text grey darken-4">
                     </div>

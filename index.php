@@ -37,13 +37,21 @@
         }
 
         if($send){
-            $mailTo = "noah@rousell.org";
+            # spam protection
+            if (isset($_POST['website']) && $_POST["website"] == "") {
+                # Send the Message if spam field is empty
+                $mailTo = "noah@rousell.org";
 
-            $headers = "From: " . $email;
-            $msgBody = "You have recieved a message from " . $email . ".\n\nMessage: " . $message;
+                $headers = "From: " . $email;
+                $msgBody = "You have recieved a message from " . $email . ".\n\nMessage: " . $message;
 
-            mail($mailTo, $headers, $msgBody, $headers);
-            header('Location: index.php?page=contact&mailsend');
+                mail($mailTo, $headers, $msgBody, $headers);
+                header('Location: index.php?page=contact&mailsend');
+            } else {
+                http_response_code(400);
+                exit;
+            }
+
         }
     } // end of form validation
  ?>
