@@ -3,6 +3,32 @@ var gameDevProjects = ['<div class="col project-container-outside s12 m6 l4"><di
 
 var projects = [
     {
+        name: "Big-Timer",
+        tags: ['web', 'app'],
+        imgSrc: "imgs/projects/big-timer.png",
+        body: "A literal big timer I made with a ton of nifty features  and cool animations.",
+        btns: [
+            {
+                text: 'Visit',
+                link: 'https://big-timer.mukduk.io'
+            }
+        ],
+        included: false
+    },
+    {
+        name: "Recount",
+        tags: ['web', 'app'],
+        imgSrc: "imgs/projects/recount.png",
+        body: "A website I built for an app I've been working on.",
+        btns: [
+            {
+                text: 'Visit Site',
+                link: 'https://recount.mukduk.io/'
+            }
+        ],
+        included: false
+    },
+    {
         name: "Cycles Endurance Site",
         tags: ['web'],
         imgSrc: "imgs/projects/cycles-endurance.png",
@@ -66,23 +92,10 @@ var projects = [
             }
         ],
         included: false
-    },
-    {
-        name: "Recount",
-        tags: ['web', 'app'],
-        imgSrc: "imgs/projects/recount.png",
-        body: "A website I built for an app idea I've been working on to see if people would be interested.",
-        btns: [
-            {
-                text: 'Visit Site',
-                link: 'https://recount.mukduk.io/'
-            }
-        ],
-        included: false
     }
 ];
 
-setTimeout(function(){
+function setUpProjects(){
     tags = [
         {
             tag: "all",
@@ -99,17 +112,12 @@ setTimeout(function(){
             pressed: false,
             element: document.querySelector("#app")
         },
-        {
-            tag: "game",
-            pressed: false,
-            element: document.querySelector("#game")
-        },
     ];
     for(var i=0;i<tags.length;i++){
         tags[i].element.addEventListener("click", togglePressed);
     }
     loadProjects();
-}, 200);
+}
 function togglePressed(){
     var tagID = this.id;
     for(var i=0;i<tags.length;i++){
@@ -170,7 +178,10 @@ function loadProjects(){
     if(tags[0].pressed && !otherTagPressed(0)){
         // All tag down
         for (var i = 0; i < projects.length; i++) {
-            document.querySelector(".projects-container").appendChild(createProjectCard(projects[i]));
+            if(!projects[i].tags.includes("game")){
+                // Dirty way of not showing my games anymore
+                document.querySelector(".projects-container").appendChild(createProjectCard(projects[i]));
+            }
         }
     } else{
         // User wants specific tag(s)

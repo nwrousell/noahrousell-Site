@@ -1,8 +1,9 @@
 <!-- HTML -->
 <div id="contact"class="frame-full hide">
+    <canvas id="canvas"></canvas>
     <div class="outside-container">
         <div class="container">
-            <div class="form-container grey darken-3">
+            <div class="form-container">
                 <h1 class="regular-text center"><?php echo $formHeading; ?></h1>
                 <form id="contact-form"class="<?php echo $formHideClass; ?>" action="index.php?page=contact" method="POST">
                     <label class="regular-text text-left">Email</label>

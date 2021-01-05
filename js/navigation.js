@@ -12,7 +12,7 @@ if(urlVars.length != 1){ // If there is a variable
     },1100);
 }
 
-window.onload = function(){
+function setUpNavigation(){
     transitionElem.classList.remove("active");
     var navArrows = document.querySelectorAll(".arrow-right-container i, .arrow-left-container i, .about-link, .projects-link, .contact-link, .home-link");
     for (var i = 0; i < navArrows.length; i++) {
@@ -35,4 +35,13 @@ function switchPage(){
     document.querySelector("#"+newPage).classList.remove("hide");
     transitionElem.classList.remove("active");
     currentPage = newPage;
+
+    // Re-start background effect
+    setUpBgEffect(currentPage)
+
+    if(window.location.href.includes("=")){
+        window.location.href = window.location.href.split("=")[0]+"="+currentPage;
+    }else{
+        window.location.href = window.location.href+"?page="+currentPage;
+    }
 }

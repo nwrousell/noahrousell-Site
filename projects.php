@@ -1,4 +1,5 @@
 <div id="projects" class="frame-full hide">
+    <canvas id="canvas"></canvas>
     <div class="outside-container">
         <div class="container">
             <h1 class="regular-text center bold"><span class="squiggly-underline underline-move-on-hover">Projects</span></h1>
@@ -11,9 +12,6 @@
                 </div>
                 <div class="tag-outer">
                     <p id="app"class="center pointer-on-hover not-pressed shadow">Apps</p>
-                </div>
-                <div class="tag-outer">
-                    <p id="game"class="center pointer-on-hover not-pressed shadow">Game Dev</p>
                 </div>
             </div>
             <div class="projects-container">

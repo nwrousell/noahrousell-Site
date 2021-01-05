@@ -17,17 +17,19 @@
     </head>
     <body>
             <div class="nav container">
-                <a href="#"><img class="to-home logo home-link" src="imgs/red-logo.png" alt="Noah Rousell Logo"></a>
+                <a href="#"><img class="to-home logo home-link" src="imgs/green-logo.png" alt="Noah Rousell Logo"></a>
                 <a href="#" data-target="slide-out" class="sidenav-trigger right hide-on-large-only"><i class="medium material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
+                    <li><a href="#" class="to-home grey-text text-lighten-4 text-half-bg home-link">Welcome</a></li>
                     <li><a href="#" class="to-about grey-text text-lighten-4 text-half-bg about-link">About</a></li>
                     <li><a href="#" class="to-projects grey-text text-lighten-4 text-half-bg projects-link">Projects</a></li>
-                    <li><a href="#" class="to-contact red-text text-darken-4 btn-rounded-outline half-bg-subtle contact-link">Contact</a></li>
+                    <li><a href="#" class="to-contact btn-rounded-outline half-bg-subtle contact-link">Contact</a></li>
                 </ul>
             </div>
             <ul id="slide-out" class="sidenav">
-                <li><a href="#" class="to-home home-link">Home</a></li>
+                <li><a href="#" class="to-home home-link">Welcome</a></li>
                 <li><a href="#" class="to-about about-link">About</a></li>
                 <li><a href="#" class="to-projects projects-link">Projects</a></li>
                 <li><a href="#" class="to-contact contact-link">Contact</a></li>
             </ul>
+            <!-- <canvas id="canvas"></canvas> -->
