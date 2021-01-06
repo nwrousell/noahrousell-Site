@@ -55,13 +55,16 @@ h1,h2,h3,h4,h5,h6 {
     transform: translate(-50%, -50%);
     font-size: 10em;
 }
+html {
+    position: relative;
+}
 .bottom-right {
-    position: absolute;
+    position: fixed;
     right: 5%;
     bottom: 5%;
 }
 .bottom-left {
-    position: absolute;
+    position: fixed;
     left: 5%;
     bottom: 5%;
 }
@@ -88,7 +91,7 @@ body {
     width: 8em;
     background-size: cover;
 }
-#home, #project, #contact, #about {
+#home, #projects, #contact, #about {
     display: table;
     width: 100%;
     /* text-align: center; */
@@ -316,7 +319,7 @@ html, body {
     width: 5em !important;
 }
 /* Mobile Styles */
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1200px){
     .projects-container {
         grid-template-columns: 1fr 1fr;
     }

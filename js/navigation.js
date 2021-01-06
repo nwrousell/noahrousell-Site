@@ -38,10 +38,11 @@ function switchPage(){
 
     // Re-start background effect
     setUpBgEffect(currentPage)
-
+    var newURL;
     if(window.location.href.includes("=")){
-        window.location.href = window.location.href.split("=")[0]+"="+currentPage;
+        newURL = window.location.href.split("=")[0]+"="+currentPage;
     }else{
-        window.location.href = window.location.href+"?page="+currentPage;
+        newURL = window.location.href+"?page="+currentPage;
     }
+    window.history.replaceState('', '', newURL);
 }
