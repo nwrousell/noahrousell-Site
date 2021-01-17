@@ -10,7 +10,7 @@ var projects = [
         btns: [
             {
                 text: 'Visit',
-                link: 'https://big-timer.mukduk.io'
+                link: 'https://bigtimer.mukduk.io'
             }
         ],
         included: false
